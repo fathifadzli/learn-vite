@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-slate-950 text-slate-100" style="background-color: #020617;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#020617" />
+  <link rel="icon" type="image/jpeg" href="./images/logo.jpg" />
+  <link rel="preload" as="image" href="./images/logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artisan Cake & Bakery Services - Custom Designer Cakes, Luxury Dessert Catering, Pastry Masterclasses, and Bespoke Gifting." />
+  <title>Services | Artisan Cake Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body
+  class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white flex flex-col justify-between">
+
+  <!-- Background Glow Effect -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-40 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -left-40 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 right-1/3 w-96 h-96 bg-rose-500/15 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-3 group transition">
+        <img src="./images/logo.jpg" alt="Artisan Cake & Bakery Logo" width="40" height="40" decoding="async"
+          class="w-10 h-10 rounded-xl object-cover border border-amber-500/30 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform" />
+        <span
+          class="font-bold text-lg tracking-tight bg-gradient-to-r from-amber-200 via-rose-200 to-amber-400 bg-clip-text text-transparent">Artisan Cake Boutique</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="flex items-center gap-1 sm:gap-2">
+        <a href="./"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          Home
+        </a>
+        <a href="./about.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          About
+        </a>
+        <a href="./services.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 transition">
+          Services
+        </a>
+        <a href="./contact.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-14 flex-1 w-full space-y-20">
+
+    <!-- Hero Section -->
+    <section class="text-center space-y-5 max-w-3xl mx-auto">
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/40 border border-amber-800/40 text-amber-300 text-xs font-medium shadow-sm">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        Bespoke Creations & Culinary Excellence
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+        Artisan Services <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-amber-200 via-rose-300 to-indigo-300 bg-clip-text text-transparent">
+          Crafted for Every Occasion
+        </span>
+      </h1>
+
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+        From breathtaking multi-tier wedding centerpieces to full-scale event dessert tables and corporate masterclasses, we transform premium ingredients into unforgettable memories.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a href="#calculator"
+          class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 font-bold text-xs hover:opacity-90 active:scale-95 transition shadow-lg shadow-amber-500/20">
+          Estimate Your Order
+        </a>
+        <a href="./contact.html"
+          class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold text-xs transition">
+          Consult Our Pastry Chef
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Catalog Section (with Alpine.js filter) -->
+    <section x-data="{
+      selectedCategory: 'all',
+      services: [
+        {
+          id: 'custom-cakes',
+          category: 'cakes',
+          title: 'Custom Designer & Wedding Cakes',
+          tag: 'Most Popular',
+          tagColor: 'amber',
+          price: 'From RM 280',
+          desc: 'Individually sculpted cakes tailored to your theme, featuring edible gold leaf, fresh botanicals, handcrafted sugar flowers, and layered premium ganache.',
+          highlights: ['Complimentary flavor tasting consultation', 'Custom sketches & 3D visualization', 'Temperature-controlled on-site delivery & setup', 'Gluten-free & low-sugar recipes available'],
+          icon: 'M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7'
+        },
+        {
+          id: 'dessert-tables',
+          category: 'catering',
+          title: 'Luxury Dessert Table & Pastry Bar',
+          tag: 'Events & Galas',
+          tagColor: 'rose',
+          price: 'From RM 1,200',
+          desc: 'A curated visual feast of artisan french macarons, miniature fruit tartlets, choux au craquelin, and verrines styled to match your event aesthetic.',
+          highlights: ['Full table styling with tiered stands & florals', 'Custom flavor menu matched to your theme', 'Dietary labeling for allergen awareness', 'Dedicated pastry crew for setup & teardown'],
+          icon: 'M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z'
+        },
+        {
+          id: 'corporate-gifting',
+          category: 'corporate',
+          title: 'Bespoke Corporate & VIP Gifting',
+          tag: 'Corporate',
+          tagColor: 'indigo',
+          price: 'Custom Quotation',
+          desc: 'Elevate your brand presence with handcrafted artisanal confectionery boxes, customized branded wax seals, ribbons, and personalized gift notes.',
+          highlights: ['Custom embossed logos & corporate color palette', 'Bulk ordering with scheduled multi-destination delivery', 'Premium gift box packaging with satin ribbons', 'Seasonal festive editions (Raya, CNY, Christmas)'],
+          icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4'
+        },
+        {
+          id: 'workshops',
+          category: 'workshops',
+          title: 'Pastry & Cake Decorating Masterclasses',
+          tag: 'Hands-On',
+          tagColor: 'emerald',
+          price: 'RM 350 / pax',
+          desc: 'Immerse yourself in small-group baking sessions led by our head chefs. Master sourdough fermentation, macaron crafting, or palette knife buttercream art.',
+          highlights: ['Intimate classes (max 8 students)', 'All premium tools & ingredients provided', 'Take home your full creation + recipe handbook', 'Certificate of completion & apron gift'],
+          icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+        },
+        {
+          id: 'wholesale',
+          category: 'corporate',
+          title: 'Artisan Cafe Wholesale Supply',
+          tag: 'B2B Partnership',
+          tagColor: 'cyan',
+          price: 'Wholesale Rates',
+          desc: 'Supply your cafe, boutique hotel, or restaurant with fresh daily deliveries of artisanal laminated croissants, specialty sourdough loaves, and signature cakes.',
+          highlights: ['Daily early-morning dispatch schedule', 'Consistent quality & temperature controlled fleet', 'Menu pairing consulting & staff training', 'Flexible minimum order quantities'],
+          icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
+        },
+        {
+          id: 'tasting-boxes',
+          category: 'cakes',
+          title: 'Curated Seasonal Tasting Boxes',
+          tag: 'Monthly Drops',
+          tagColor: 'purple',
+          price: 'RM 120 / box',
+          desc: 'Experience our latest flavor experiments and micro-batch bakes delivered straight to your doorstep in an elegant keepsake sampling box.',
+          highlights: ['6 unique chef-selected mini pastries each edition', 'Detailed tasting notes & tea pairing guide', 'Limited seasonal ingredients & micro-batches', 'Exclusive early access to seasonal cake bookings'],
+          icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+        }
+      ]
+    }" class="space-y-8">
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-5">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Our Service Catalog</h2>
+          <p class="text-xs text-slate-400 mt-1">Select a category to explore our tailored packages and offerings</p>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800">
+          <button @click="selectedCategory = 'all'"
+            :class="selectedCategory === 'all' ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            All Services
+          </button>
+          <button @click="selectedCategory = 'cakes'"
+            :class="selectedCategory === 'cakes' ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Custom Cakes
+          </button>
+          <button @click="selectedCategory = 'catering'"
+            :class="selectedCategory === 'catering' ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Event Catering
+          </button>
+          <button @click="selectedCategory = 'corporate'"
+            :class="selectedCategory === 'corporate' ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Corporate & B2B
+          </button>
+          <button @click="selectedCategory = 'workshops'"
+            :class="selectedCategory === 'workshops' ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Masterclasses
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <template x-for="service in services" :key="service.id">
+          <div x-show="selectedCategory === 'all' || selectedCategory === service.category"
+            x-transition.opacity.duration.300ms
+            class="bg-slate-900/60 border border-slate-800/90 hover:border-slate-700/80 backdrop-blur-xl rounded-2xl p-6 flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-950/40 hover:-translate-y-1">
+            
+            <div class="space-y-4">
+              <!-- Card Top Meta -->
+              <div class="flex items-center justify-between">
+                <div class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700/60 text-amber-300 flex items-center justify-center group-hover:scale-110 group-hover:border-amber-500/40 transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" :d="service.icon"></path>
+                  </svg>
+                </div>
+                <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300"
+                  x-text="service.tag"></span>
+              </div>
+
+              <!-- Title & Price -->
+              <div>
+                <h3 class="text-lg font-bold text-white group-hover:text-amber-200 transition" x-text="service.title"></h3>
+                <p class="text-xs font-mono font-semibold text-amber-400 mt-1" x-text="service.price"></p>
+              </div>
+
+              <!-- Description -->
+              <p class="text-xs text-slate-400 leading-relaxed" x-text="service.desc"></p>
+
+              <!-- Feature Highlights -->
+              <div class="pt-2 border-t border-slate-800/60 space-y-2">
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Includes</p>
+                <ul class="space-y-1.5">
+                  <template x-for="(point, i) in service.highlights" :key="i">
+                    <li class="flex items-start gap-2 text-xs text-slate-300">
+                      <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span x-text="point"></span>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80">
+              <a href="./contact.html"
+                class="w-full py-2.5 px-4 rounded-xl bg-slate-800/80 hover:bg-indigo-600 active:scale-95 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-slate-700/80 hover:border-indigo-500">
+                <span>Inquire About This Service</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Interactive Custom Cake / Event Price Estimator -->
+    <section id="calculator" x-data="{
+      tier: '2',
+      guests: 50,
+      complexity: 'premium',
+      deliveryZone: 'kl_selangor',
+      addons: {
+        sugarFlowers: true,
+        goldLeaf: false,
+        dessertPlatter: false
+      },
+      baseTierPrices: {
+        '1': 180,
+        '2': 380,
+        '3': 750,
+        '4': 1400
+      },
+      complexityMultipliers: {
+        'standard': 1.0,
+        'premium': 1.25,
+        'couture': 1.6
+      },
+      deliveryFees: {
+        'pickup': 0,
+        'kl_selangor': 60,
+        'outstation': 180
+      },
+      calculateTotal() {
+        let base = this.baseTierPrices[this.tier] * this.complexityMultipliers[this.complexity];
+        if (this.addons.sugarFlowers) base += 80;
+        if (this.addons.goldLeaf) base += 60;
+        if (this.addons.dessertPlatter) base += 220;
+        base += this.deliveryFees[this.deliveryZone];
+        return Math.round(base);
+      }
+    }" class="bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-indigo-950/40 border border-slate-800 backdrop-blur-xl rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/80 border border-indigo-800/60 text-indigo-300 text-xs font-semibold">
+          <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          Instant Estimation Engine
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Custom Cake & Catering Calculator</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Configure your event specifications for a realistic budget estimate.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Controls Column -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Cake Tiers -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-300">Cake Size / Tiers</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <button @click="tier = '1'"
+                :class="tier === '1' ? 'bg-indigo-600 text-white font-bold border-indigo-500 shadow-md shadow-indigo-600/30' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-center transition cursor-pointer">
+                <div class="text-xs">1-Tier</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">15-20 pax</div>
+              </button>
+              <button @click="tier = '2'"
+                :class="tier === '2' ? 'bg-indigo-600 text-white font-bold border-indigo-500 shadow-md shadow-indigo-600/30' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-center transition cursor-pointer">
+                <div class="text-xs">2-Tiers</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">40-60 pax</div>
+              </button>
+              <button @click="tier = '3'"
+                :class="tier === '3' ? 'bg-indigo-600 text-white font-bold border-indigo-500 shadow-md shadow-indigo-600/30' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-center transition cursor-pointer">
+                <div class="text-xs">3-Tiers</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">80-120 pax</div>
+              </button>
+              <button @click="tier = '4'"
+                :class="tier === '4' ? 'bg-indigo-600 text-white font-bold border-indigo-500 shadow-md shadow-indigo-600/30' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-center transition cursor-pointer">
+                <div class="text-xs">Grand 4-Tier</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">150+ pax</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Decoration Style -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-300">Design & Finish Complexity</label>
+            <div class="grid grid-cols-3 gap-2.5">
+              <button @click="complexity = 'standard'"
+                :class="complexity === 'standard' ? 'bg-indigo-600 text-white font-bold border-indigo-500' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-left transition cursor-pointer">
+                <div class="text-xs font-semibold">Minimalist</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Smooth buttercream</div>
+              </button>
+              <button @click="complexity = 'premium'"
+                :class="complexity === 'premium' ? 'bg-indigo-600 text-white font-bold border-indigo-500' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-left transition cursor-pointer">
+                <div class="text-xs font-semibold">Artisan Texture</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Palette knife art</div>
+              </button>
+              <button @click="complexity = 'couture'"
+                :class="complexity === 'couture' ? 'bg-indigo-600 text-white font-bold border-indigo-500' : 'bg-slate-950/60 text-slate-300 border-slate-800 hover:border-slate-700'"
+                class="p-3 rounded-xl border text-left transition cursor-pointer">
+                <div class="text-xs font-semibold">Haute Couture</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">Full sculpted sugar</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Addons Checklist -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-300">Recommended Enhancements</label>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 transition cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" x-model="addons.sugarFlowers" class="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4 bg-slate-900 border-slate-700">
+                  <div>
+                    <div class="text-xs font-semibold text-slate-200">Handcrafted Sugar Flowers</div>
+                    <div class="text-[11px] text-slate-400">Botanically accurate wafer and gum paste blossoms</div>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-semibold text-amber-300">+RM 80</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 transition cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" x-model="addons.goldLeaf" class="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4 bg-slate-900 border-slate-700">
+                  <div>
+                    <div class="text-xs font-semibold text-slate-200">24K Edible Gold Leaf Accents</div>
+                    <div class="text-[11px] text-slate-400">Hand-applied metallic shimmer and edging</div>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-semibold text-amber-300">+RM 60</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-slate-700 transition cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" x-model="addons.dessertPlatter" class="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4 bg-slate-900 border-slate-700">
+                  <div>
+                    <div class="text-xs font-semibold text-slate-200">Mini French Macaron Platter (24 pcs)</div>
+                    <div class="text-[11px] text-slate-400">Assorted signature flavor bites for table pairing</div>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-semibold text-amber-300">+RM 220</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Delivery Zone -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-300">Fulfillment & Delivery</label>
+            <select x-model="deliveryZone" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition">
+              <option value="pickup">Self Collection at Boutique Kitchen (Free)</option>
+              <option value="kl_selangor">Klang Valley Temperature-Controlled Van Delivery (+RM 60)</option>
+              <option value="outstation">Specialized Outstation Delivery & Setup (+RM 180)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Estimate Summary Card -->
+        <div class="lg:col-span-5 bg-slate-950/80 border border-slate-800/90 rounded-2xl p-6 sm:p-8 space-y-6 text-center shadow-xl">
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Estimated Investment</div>
+          
+          <div class="space-y-1">
+            <div class="text-4xl sm:text-5xl font-black text-transparent bg-gradient-to-r from-amber-200 via-rose-300 to-indigo-300 bg-clip-text font-mono"
+                 x-text="'RM ' + calculateTotal()">
+              RM 475
+            </div>
+            <p class="text-[11px] text-slate-500">*Final pricing confirmed upon bespoke flavor selection</p>
+          </div>
+
+          <div class="space-y-2 text-left bg-slate-900/60 p-4 rounded-xl border border-slate-800/80 text-xs">
+            <div class="flex justify-between text-slate-300">
+              <span>Size / Format</span>
+              <span class="font-semibold text-white" x-text="tier + ' Tier Cake'"></span>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>Finish Grade</span>
+              <span class="font-semibold capitalize text-white" x-text="complexity"></span>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>Lead Time</span>
+              <span class="font-semibold text-emerald-400">5-7 business days</span>
+            </div>
+          </div>
+
+          <a href="./contact.html"
+            class="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 font-bold text-xs hover:opacity-95 active:scale-95 transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+            <span>Proceed to Book This Configuration</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <div class="flex items-center justify-center gap-2 text-[11px] text-slate-500">
+            <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>100% Halal-certified ingredients & pristine kitchen</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work / The 4-Step Journey -->
+    <section class="space-y-10">
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Our Artisan Process</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Every centerpiece undergoes a meticulous 4-stage craft cycle to ensure flawless beauty and taste.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+        <!-- Step 1 -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 relative overflow-hidden group hover:border-slate-700 transition">
+          <div class="text-4xl font-black text-slate-800 group-hover:text-indigo-900/50 transition mb-3 font-mono">01</div>
+          <h3 class="text-sm font-bold text-white mb-1.5">Consultation & Moodboard</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Share your floral inspirations, color palettes, flavor preferences, and event timeline.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 relative overflow-hidden group hover:border-slate-700 transition">
+          <div class="text-4xl font-black text-slate-800 group-hover:text-purple-900/50 transition mb-3 font-mono">02</div>
+          <h3 class="text-sm font-bold text-white mb-1.5">Design Sketch & Flavor Curation</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">We provide digital sketches and arrange tasting samplers to lock in your custom combination.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 relative overflow-hidden group hover:border-slate-700 transition">
+          <div class="text-4xl font-black text-slate-800 group-hover:text-rose-900/50 transition mb-3 font-mono">03</div>
+          <h3 class="text-sm font-bold text-white mb-1.5">Artisan Baking & Sculpting</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Baked fresh 24 hours prior to delivery using French butter, premium chocolates, and Madagascar vanilla.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 relative overflow-hidden group hover:border-slate-700 transition">
+          <div class="text-4xl font-black text-slate-800 group-hover:text-amber-900/50 transition mb-3 font-mono">04</div>
+          <h3 class="text-sm font-bold text-white mb-1.5">Delivery & On-Site Styling</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Hand-delivered in a chilled van and set up with perfection by our lead pastry decorators.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive FAQ Accordion (Alpine.js) -->
+    <section x-data="{
+      openItem: 1,
+      toggle(id) {
+        this.openItem = this.openItem === id ? null : id;
+      }
+    }" class="bg-slate-900/50 border border-slate-800/80 backdrop-blur-xl rounded-2xl p-6 sm:p-10 shadow-xl space-y-6">
+      
+      <div class="text-center space-y-2 max-w-xl mx-auto">
+        <h2 class="text-xl sm:text-2xl font-bold text-white">Frequently Asked Questions</h2>
+        <p class="text-xs text-slate-400">Everything you need to know before booking your custom order.</p>
+      </div>
+
+      <div class="space-y-3 max-w-3xl mx-auto">
+        
+        <!-- Q1 -->
+        <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+          <button @click="toggle(1)" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition">
+            <span>How far in advance should I place my order?</span>
+            <span class="text-indigo-400 text-lg transition-transform duration-200" :class="openItem === 1 ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="openItem === 1" x-transition.opacity.duration.200ms class="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+            For standard celebration cakes, we recommend 5-7 days notice. For multi-tier wedding cakes and full event dessert table catering, please book 3-6 weeks in advance to secure your date and ensure botanical elements can be sourced.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+          <button @click="toggle(2)" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition">
+            <span>Are your ingredients Halal and do you cater to dietary allergies?</span>
+            <span class="text-indigo-400 text-lg transition-transform duration-200" :class="openItem === 2 ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="openItem === 2" x-transition.opacity.duration.200ms class="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3" style="display: none;">
+            Yes! All our ingredients are 100% Halal-certified and alcohol-free. We also prepare gluten-free sponge alternatives, dairy-conscious ganaches, and refined-sugar-free recipes upon request.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+          <button @click="toggle(3)" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition">
+            <span>How is temperature-sensitive delivery handled?</span>
+            <span class="text-indigo-400 text-lg transition-transform duration-200" :class="openItem === 3 ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="openItem === 3" x-transition.opacity.duration.200ms class="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3" style="display: none;">
+            All multi-tier cakes and delicate pastries are transported via our dedicated refrigerated delivery vans with internal stabilizer mounts to guarantee zero melting or shifting during transit.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+          <button @click="toggle(4)" class="w-full px-5 py-4 text-left flex items-center justify-between text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition">
+            <span>Can I book a private workshop session for team bonding?</span>
+            <span class="text-indigo-400 text-lg transition-transform duration-200" :class="openItem === 4 ? 'rotate-45' : ''">+</span>
+          </button>
+          <div x-show="openItem === 4" x-transition.opacity.duration.200ms class="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3" style="display: none;">
+            Absolutely. We host private corporate masterclasses and bridal shower baking sessions for groups of 6 to 20 participants in our kitchen studio with customizable menu themes.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-indigo-500/10 border border-amber-500/20 rounded-3xl p-8 sm:p-12 text-center space-y-6">
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Ready to create something memorable?</h2>
+      <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed">
+        Let our chefs bring your vision to life with artisan craftsmanship and unrivaled taste.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="./contact.html"
+          class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-rose-400 to-amber-500 text-slate-950 font-bold text-xs hover:opacity-90 active:scale-95 transition shadow-xl shadow-amber-500/20">
+          Send Us an Inquiry
+        </a>
+        <a href="https://wa.me/60123456789" target="_blank"
+          class="px-6 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-2">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
+    <p>&copy; 2026 Artisan Cake Boutique. Handcrafted with passion, precision & elegance.</p>
+  </footer>
+
+  <!-- App Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
