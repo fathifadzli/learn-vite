@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-slate-950 text-slate-100" style="background-color: #020617;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#020617" />
+  <link rel="icon" type="image/jpeg" href="./images/logo.jpg" />
+  <link rel="preload" as="image" href="./images/logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn more about Artisan Cake Boutique - Handcrafted Cakes, Pastries and Sweet Delights" />
+  <title>About | Artisan Cake & Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body
+  class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white flex flex-col justify-between">
+
+  <!-- Background Glow Effect -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -right-40 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 left-1/3 -translate-x-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-3 group transition">
+        <img src="./images/logo.jpg" alt="Artisan Cake & Bakery Logo" width="40" height="40" decoding="async"
+          class="w-10 h-10 rounded-xl object-cover border border-amber-500/30 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform" />
+        <span
+          class="font-bold text-lg tracking-tight bg-gradient-to-r from-amber-200 via-rose-200 to-amber-400 bg-clip-text text-transparent">Artisan Cake Boutique</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="flex items-center gap-1 sm:gap-2">
+        <a href="./"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          Home
+        </a>
+        <a href="./about.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 transition">
+          About
+        </a>
+        <a href="./contact.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-14 flex-1 w-full space-y-16">
+
+    <!-- Hero Section -->
+    <section class="text-center space-y-5 max-w-3xl mx-auto">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-medium shadow-sm">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
+        About ViteStarter
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+        Engineered for speed, <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          simplicity, & developer joy
+        </span>
+      </h1>
+
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+        ViteStarter bridges modern frontend ergonomics with zero-overhead tooling. Designed to get you from concept to production-ready deployments in minutes.
+      </p>
+    </section>
+
+    <!-- Key Metrics Grid -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm p-5 rounded-2xl text-center hover:border-slate-700 transition">
+        <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">&lt; 50ms</div>
+        <div class="text-xs text-slate-400 mt-1 font-medium">HMR Updates</div>
+      </div>
+      <div class="bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm p-5 rounded-2xl text-center hover:border-slate-700 transition">
+        <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">100%</div>
+        <div class="text-xs text-slate-400 mt-1 font-medium">Native ESM</div>
+      </div>
+      <div class="bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm p-5 rounded-2xl text-center hover:border-slate-700 transition">
+        <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono">0 Config</div>
+        <div class="text-xs text-slate-400 mt-1 font-medium">CSS Engine</div>
+      </div>
+      <div class="bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm p-5 rounded-2xl text-center hover:border-slate-700 transition">
+        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">Automated</div>
+        <div class="text-xs text-slate-400 mt-1 font-medium">Pages CI/CD</div>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture Deep-Dive (Alpine.js) -->
+    <section x-data="{ 
+      activeTab: 'philosophy',
+      pillars: [
+        {
+          id: 'philosophy',
+          title: 'Philosophy',
+          heading: 'Zero Bloat, Maximum Velocity',
+          content: 'Heavy JavaScript frameworks aren\'t always necessary for content-driven and lightweight interactive websites. By pairing Alpine.js with Vite and modern CSS, you achieve high interactivity with minimal runtime overhead.',
+          icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+        },
+        {
+          id: 'stack',
+          title: 'Core Stack',
+          heading: 'Handpicked Modern Tooling',
+          content: 'Built on Vite 6 for instant compilation, Tailwind CSS v4 for bleeding-edge CSS engine performance without config clutter, and Alpine.js v3 for declarative DOM behaviors directly in markup.',
+          icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
+        },
+        {
+          id: 'workflow',
+          title: 'Deployment',
+          heading: 'Automated GitHub Pages Workflow',
+          content: 'Every push to the main branch triggers an optimized build and deploys seamlessly to GitHub Pages via native GitHub Actions workflows, guaranteeing zero-downtime static delivery.',
+          icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12'
+        }
+      ]
+    }" class="bg-slate-900/60 border border-slate-800 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5 mb-6">
+        <div>
+          <h2 class="text-xl font-bold text-white">Architecture & Concepts</h2>
+          <p class="text-xs text-slate-400 mt-1">Explore why this boilerplate provides an unfair developer advantage</p>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="flex flex-wrap gap-2">
+          <template x-for="pillar in pillars" :key="pillar.id">
+            <button @click="activeTab = pillar.id"
+              :class="activeTab === pillar.id ? 'bg-indigo-600 text-white font-medium shadow-md shadow-indigo-600/30' : 'bg-slate-800/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800'"
+              class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5"
+              x-text="pillar.title">
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <!-- Tab Content Area -->
+      <template x-for="pillar in pillars" :key="pillar.id">
+        <div x-show="activeTab === pillar.id" x-transition.opacity.duration.300ms class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pillar.icon"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-100" x-text="pillar.heading"></h3>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed pl-11" x-text="pillar.content"></p>
+        </div>
+      </template>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="rounded-2xl bg-gradient-to-r from-indigo-950/60 via-purple-950/40 to-slate-900/60 border border-indigo-900/40 p-8 text-center space-y-4">
+      <h2 class="text-2xl font-bold text-white">Ready to create your next project?</h2>
+      <p class="text-sm text-slate-400 max-w-lg mx-auto">
+        Jump right into development or head back to the playground to test the live reactivity demo.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a href="./"
+          class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white text-xs font-semibold shadow-lg shadow-indigo-600/30 transition">
+          Back to Home
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
+    <p>Blank starter project configured with Vite, Tailwind CSS, and Alpine.js.</p>
+  </footer>
+
+  <!-- App Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

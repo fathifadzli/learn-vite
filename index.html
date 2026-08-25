@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth bg-slate-950 text-slate-100" style="background-color: #020617;">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+  <meta name="theme-color" content="#020617" />
+  <link rel="icon" type="image/jpeg" href="./images/logo.jpg" />
+  <link rel="preload" as="image" href="./images/logo.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modern starter template with HTML, Tailwind CSS, Alpine.js, and Vite" />
-  <title>Vite + Tailwind CSS + Alpine.js</title>
+  <meta name="description" content="Artisan Cake & Bakery - Handcrafted Cakes, Pastries and Sweet Delights" />
+  <title>Artisan Cake & Bakery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -27,22 +28,28 @@
   <!-- Header / Navbar -->
   <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div
-          class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
+      <a href="./" class="flex items-center gap-3 group transition">
+        <img src="./images/logo.jpg" alt="Artisan Cake & Bakery Logo" width="40" height="40" decoding="async"
+          class="w-10 h-10 rounded-xl object-cover border border-amber-500/30 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform" />
         <span
-          class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">ViteStarter</span>
-      </div>
+          class="font-bold text-lg tracking-tight bg-gradient-to-r from-amber-200 via-rose-200 to-amber-400 bg-clip-text text-transparent">Artisan Cake Boutique</span>
+      </a>
 
-      <div class="flex items-center gap-3">
-        <span
-          class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Ready
-          to Build</span>
-      </div>
+      <!-- Navigation Links -->
+      <nav class="flex items-center gap-1 sm:gap-2">
+        <a href="./"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 transition">
+          Home
+        </a>
+        <a href="./about.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          About
+        </a>
+        <a href="./contact.html"
+          class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition">
+          Contact
+        </a>
+      </nav>
     </div>
   </header>
 
