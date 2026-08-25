@@ -1,64 +1,74 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern starter template with HTML, Tailwind CSS, Alpine.js, and Vite" />
-    <title>Vite + Tailwind CSS + Alpine.js</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white flex flex-col justify-between">
-    
-    <!-- Background Glow Effect -->
-    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute top-1/3 -left-40 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern starter template with HTML, Tailwind CSS, Alpine.js, and Vite" />
+  <title>Vite + Tailwind CSS + Alpine.js</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body
+  class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white flex flex-col justify-between">
+
+  <!-- Background Glow Effect -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -left-40 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span
+          class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">ViteStarter</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span
+          class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Ready
+          to Build</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex-1 flex flex-col justify-center items-center text-center">
+
+    <!-- Badge -->
+    <div
+      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-medium mb-6 shadow-sm">
+      <span class="inline-block w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+      Vite 6 + Tailwind CSS 4 + Alpine.js 3
     </div>
 
-    <!-- Header / Navbar -->
-    <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-slate-950/70">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">ViteStarter</span>
-        </div>
+    <!-- Hero Title -->
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-3xl leading-tight sm:leading-none mb-6">
+      Building fast with <br class="hidden sm:inline" />
+      <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">HTML,
+        Tailwind & Alpine</span>
+    </h1>
 
-        <div class="flex items-center gap-3">
-          <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Ready to Build</span>
-        </div>
-      </div>
-    </header>
+    <p class="text-slate-400 max-w-xl text-base sm:text-lg mb-10 leading-relaxed">
+      A minimalist, lightning-fast starter environment configured with modern developer tooling and reactive components.
+    </p>
 
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex-1 flex flex-col justify-center items-center text-center">
-      
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-800/50 text-indigo-300 text-xs font-medium mb-6 shadow-sm">
-        <span class="inline-block w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-        Vite 6 + Tailwind CSS 4 + Alpine.js 3
-      </div>
-
-      <!-- Hero Title -->
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-3xl leading-tight sm:leading-none mb-6">
-        Build fast with <br class="hidden sm:inline" />
-        <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">HTML, Tailwind & Alpine</span>
-      </h1>
-
-      <p class="text-slate-400 max-w-xl text-base sm:text-lg mb-10 leading-relaxed">
-        A minimalist, lightning-fast starter environment configured with modern developer tooling and reactive components.
-      </p>
-
-      <!-- Interactive Alpine.js Demo Component -->
-      <div 
-        x-data="{ 
+    <!-- Interactive Alpine.js Demo Component -->
+    <div x-data="{ 
           count: 0, 
           activeTab: 'counter', 
           items: ['Tailwind CSS v4 Integration', 'Alpine.js Reactivity', 'Vite Hot Module Replacement'],
@@ -69,101 +79,91 @@
             setTimeout(() => this.copied = false, 2000);
           }
         }"
-        class="w-full max-w-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl text-left"
-      >
-        <!-- Alpine Tabs -->
-        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-          <div class="flex gap-2">
-            <button 
-              @click="activeTab = 'counter'" 
-              :class="activeTab === 'counter' ? 'bg-indigo-600 text-white font-medium shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'" 
-              class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer"
-            >
-              Interactive Counter
-            </button>
-            <button 
-              @click="activeTab = 'stack'" 
-              :class="activeTab === 'stack' ? 'bg-indigo-600 text-white font-medium shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'" 
-              class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer"
-            >
-              Tech Stack
-            </button>
-          </div>
-          <span class="text-[11px] text-slate-500 font-mono">Alpine.js Powered</span>
-        </div>
-
-        <!-- Tab 1: Interactive Counter -->
-        <div x-show="activeTab === 'counter'" x-transition class="space-y-4">
-          <p class="text-xs text-slate-400">Click below to test Alpine.js reactive state:</p>
-          <div class="flex items-center gap-4 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80">
-            <div class="flex-1">
-              <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Current Count</div>
-              <div class="text-3xl font-black text-white font-mono" x-text="count">0</div>
-            </div>
-            <div class="flex gap-2">
-              <button 
-                @click="count--" 
-                class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 font-bold transition flex items-center justify-center cursor-pointer border border-slate-700"
-                title="Decrease"
-              >
-                -
-              </button>
-              <button 
-                @click="count++" 
-                class="w-10 h-10 rounded-lg bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold transition flex items-center justify-center cursor-pointer shadow-lg shadow-indigo-600/30"
-                title="Increase"
-              >
-                +
-              </button>
-              <button 
-                @click="count = 0" 
-                class="px-3 h-10 rounded-lg bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-xs text-slate-300 transition flex items-center justify-center cursor-pointer border border-slate-700"
-              >
-                Reset
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Tech Stack -->
-        <div x-show="activeTab === 'stack'" x-transition class="space-y-3" style="display: none;">
-          <p class="text-xs text-slate-400">Pre-configured modules and features:</p>
-          <ul class="space-y-2">
-            <template x-for="(item, index) in items" :key="index">
-              <li class="flex items-center gap-2.5 text-xs text-slate-300 bg-slate-950/50 p-2.5 rounded-lg border border-slate-800/60">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                <span x-text="item"></span>
-              </li>
-            </template>
-          </ul>
-        </div>
-
-        <!-- Quick Start Command -->
-        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
-          <div class="flex items-center gap-2 text-xs font-mono text-slate-400 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800 w-full overflow-x-auto">
-            <span class="text-indigo-400 select-none">$</span>
-            <span>npm run dev</span>
-          </div>
-          <button 
-            @click="copyCommand()" 
-            class="shrink-0 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 transition cursor-pointer border border-slate-700 flex items-center gap-1.5"
-          >
-            <span x-text="copied ? 'Copied!' : 'Copy'">Copy</span>
+      class="w-full max-w-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl text-left">
+      <!-- Alpine Tabs -->
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+        <div class="flex gap-2">
+          <button @click="activeTab = 'counter'"
+            :class="activeTab === 'counter' ? 'bg-indigo-600 text-white font-medium shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Interactive Counter
+          </button>
+          <button @click="activeTab = 'stack'"
+            :class="activeTab === 'stack' ? 'bg-indigo-600 text-white font-medium shadow-md shadow-indigo-600/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'"
+            class="px-3.5 py-1.5 rounded-lg text-xs transition cursor-pointer">
+            Tech Stack
           </button>
         </div>
-
+        <span class="text-[11px] text-slate-500 font-mono">Alpine.js Powered</span>
       </div>
 
-    </main>
+      <!-- Tab 1: Interactive Counter -->
+      <div x-show="activeTab === 'counter'" x-transition class="space-y-4">
+        <p class="text-xs text-slate-400">Click below to test Alpine.js reactive state:</p>
+        <div class="flex items-center gap-4 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80">
+          <div class="flex-1">
+            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Current Count</div>
+            <div class="text-3xl font-black text-white font-mono" x-text="count">0</div>
+          </div>
+          <div class="flex gap-2">
+            <button @click="count--"
+              class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 font-bold transition flex items-center justify-center cursor-pointer border border-slate-700"
+              title="Decrease">
+              -
+            </button>
+            <button @click="count++"
+              class="w-10 h-10 rounded-lg bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold transition flex items-center justify-center cursor-pointer shadow-lg shadow-indigo-600/30"
+              title="Increase">
+              +
+            </button>
+            <button @click="count = 0"
+              class="px-3 h-10 rounded-lg bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-xs text-slate-300 transition flex items-center justify-center cursor-pointer border border-slate-700">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
-      <p>Blank starter project configured with Vite, Tailwind CSS, and Alpine.js.</p>
-    </footer>
+      <!-- Tab 2: Tech Stack -->
+      <div x-show="activeTab === 'stack'" x-transition class="space-y-3" style="display: none;">
+        <p class="text-xs text-slate-400">Pre-configured modules and features:</p>
+        <ul class="space-y-2">
+          <template x-for="(item, index) in items" :key="index">
+            <li
+              class="flex items-center gap-2.5 text-xs text-slate-300 bg-slate-950/50 p-2.5 rounded-lg border border-slate-800/60">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span x-text="item"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
 
-    <!-- App Entry Script -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      <!-- Quick Start Command -->
+      <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+        <div
+          class="flex items-center gap-2 text-xs font-mono text-slate-400 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800 w-full overflow-x-auto">
+          <span class="text-indigo-400 select-none">$</span>
+          <span>npm run dev</span>
+        </div>
+        <button @click="copyCommand()"
+          class="shrink-0 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 transition cursor-pointer border border-slate-700 flex items-center gap-1.5">
+          <span x-text="copied ? 'Copied!' : 'Copy'">Copy</span>
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
+    <p>Blank starter project configured with Vite, Tailwind CSS, and Alpine.js.</p>
+  </footer>
+
+  <!-- App Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
